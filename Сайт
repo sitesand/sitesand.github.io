@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мария Соколова — няня-гувернантка</title>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Nunito+Sans:wght@400;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{--bg:#f7f9f6;--surface:#ffffff;--ink:#1f3a3d;--muted:#566b6c;--sage:#dce9e1;--honey:#f0b84b;--honey-ink:#3b2a05;--line:#cfdcd3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#112023;--surface:#183034;--ink:#eaf3ee;--muted:#a9bfb8;--sage:#21424a;--line:#2f4f52}}
+:root[data-theme="dark"]{--bg:#112023;--surface:#183034;--ink:#eaf3ee;--muted:#a9bfb8;--sage:#21424a;--line:#2f4f52}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Literata,Georgia,serif;line-height:1.2;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;flex-wrap:wrap}
+.brand{font-family:Literata,serif;font-weight:700;text-decoration:none;font-size:1.1rem}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{text-decoration:none;padding:8px 12px;border-radius:999px;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{background:var(--sage)}
+nav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.page{display:none;padding:48px 0 72px}
+.page.on{display:block}
+.btn{display:inline-block;background:var(--honey);color:var(--honey-ink);font-weight:700;text-decoration:none;padding:13px 24px;border-radius:12px;border:0;font:700 1rem "Nunito Sans",sans-serif;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.lead{font-size:1.15rem;color:var(--muted)}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.day h3{margin-bottom:16px}
+.day ol{list-style:none;margin:0;padding:0 0 0 18px;border-left:3px solid var(--sage)}
+.day li{position:relative;padding:0 0 14px 18px}
+.day li::before{content:"";position:absolute;left:-27px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--honey);border:3px solid var(--surface)}
+.day b{font-family:Literata,serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card p{margin:0;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin:32px 0;padding:24px 0;border-block:1px solid var(--line)}
+.facts strong{display:block;font:700 1.8rem Literata,serif}
+.facts span{color:var(--muted)}
+.band{background:var(--sage);border-radius:20px;padding:28px;margin-top:40px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;background:var(--surface);border-radius:12px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}
+th{font-family:Literata,serif}
+.calc{display:flex;flex-wrap:wrap;gap:16px;align-items:end;margin-top:12px}
+label{display:block;font-weight:600;margin-bottom:6px}
+select,input[type=number]{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.sum{font:700 1.6rem Literata,serif}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+blockquote p{font-family:Literata,serif;font-size:1.05rem}
+cite{font-style:normal;color:var(--muted);font-size:.95rem}
+.list{padding-left:1.2em;margin:0 0 1em}
+.list li{margin-bottom:.4em}
+.contact a.big{display:block;font:700 1.5rem Literata,serif;text-decoration:none;margin:4px 0 18px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.95rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.page{padding-top:32px}}
+@media(prefers-reduced-motion:no-preference){.page.on{animation:in .35s ease-out}@keyframes in{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="#home">Мария Соколова</a>
+<nav aria-label="Разделы сайта">
+<a href="#home">Главная</a><a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+</nav></div></header>
+
+<main class="wrap">
+
+<section class="page" id="home" aria-label="Главная">
+<div class="hero">
+<div>
+<h1>Спокойный день для ребёнка и уверенность для родителей</h1>
+<p class="lead">Я — няня-гувернантка с педагогическим образованием. Присматриваю за детьми от 1 до 12 лет, занимаюсь английским и подготовкой к школе, веду режим дня без стресса.</p>
+<div class="row"><a class="btn" href="#contacts">Договориться о знакомстве</a><a class="btn alt" href="#services">Что я делаю</a></div>
+</div>
+<div class="day">
+<h3>Обычный день с ребёнком 5 лет</h3>
+<ol>
+<li><b>8:30</b> — завтрак и сборы в садик или на занятия</li>
+<li><b>10:00</b> — развивающие игры, лепка, чтение</li>
+<li><b>12:30</b> — прогулка и обед</li>
+<li><b>15:00</b> — дневной сон или тихий час</li>
+<li><b>16:30</b> — английский в игре, подготовка к школе</li>
+<li><b>18:30</b> — ужин, и вечерний отчёт для родителей</li>
+</ol>
+</div>
+</div>
+<div class="facts">
+<div><strong>9 лет</strong><span>работы с семьями</span></div>
+<div><strong>24 семьи</strong><span>доверили мне детей</span></div>
+<div><strong>B2</strong><span>уровень английского языка</span></div>
+<div><strong>Первая помощь</strong><span>сертификат обновлён в 2026 году</span></div>
+</div>
+</section>
+
+<section class="page" id="about" aria-label="Обо мне">
+<h1>Обо мне</h1>
+<p class="lead">Мне 34 года, у меня есть сын-школьник, и я знаю, как важно оставлять ребёнка с тем, кому доверяешь.</p>
+<p>Я окончила педагогический университет по специальности «Дошкольное образование», потом прошла курсы по детской психологии и методике Монтессори. Девять лет работаю в семьях: сначала с малышами, затем с детьми школьного возраста.</p>
+<p>Мой подход простой: чёткий режим, доброжелательные границы и много живого общения. Телефон и телевизор в рабочее время — только по договорённости с вами.</p>
+<div class="grid">
+<div class="card"><h3>Образование</h3><p>Педагогический университет, дошкольное образование. Курсы по Монтессори и возрастной психологии.</p></div>
+<div class="card"><h3>Языки</h3><p>Русский — родной, английский — B2. Занимаюсь с детьми от 4 лет через игру и песни.</p></div>
+<div class="card"><h3>Безопасность</h3><p>Справка об отсутствии судимости, медкнижка, сертификат по первой помощи детям.</p></div>
+</div>
+</section>
+
+<section class="page" id="services" aria-label="Услуги">
+<h1>Услуги</h1>
+<p class="lead">Выбираю формат вместе с вами: на несколько часов, на день или на постоянной основе.</p>
+<div class="grid">
+<div class="card"><h3>Няня на день</h3><p>Присмотр, прогулки, питание, сон, игры. Вечером коротко расскажу, как прошёл день.</p></div>
+<div class="card"><h3>Гувернантка</h3><p>Развитие речи, счёт, чтение, письмо. Занятия по программе, которую мы согласуем заранее.</p></div>
+<div class="card"><h3>Английский с няней</h3><p>Говорим на английском в быту: за завтраком, на прогулке, в играх. Без зубрёжки.</p></div>
+<div class="card"><h3>Подготовка к школе</h3><p>Азбука, счёт, мелкая моторика, привычка сидеть и слушать. Занятия по 30–40 минут.</p></div>
+<div class="card"><h3>Забрать из школы</h3><p>Встречу после уроков или кружка, накормлю, помогу с домашним заданием.</p></div>
+<div class="card"><h3>Вечер для родителей</h3><p>Укладываю спать, остаюсь до вашего возвращения. Можно разово.</p></div>
+</div>
+<div class="band"><h3>Как мы начнём</h3>
+<ol class="list"><li>Вы пишете мне о ребёнке: возраст, режим, пожелания.</li><li>Мы созваниваемся или встречаемся втроём — вы, ребёнок и я.</li><li>Выходим на пробный день, потом обсуждаем, что стоит изменить.</li></ol></div>
+</section>
+
+<section class="page" id="prices" aria-label="Цены">
+<h1>Цены</h1>
+<p class="lead">Цена зависит от возраста, числа детей и задач. Ориентиры ниже; точную сумму назову после знакомства.</p>
+<div class="tbl"><table>
+<tr><th>Формат</th><th>Стоимость</th></tr>
+<tr><td>Няня, один ребёнок</td><td>600 ₽ в час</td></tr>
+<tr><td>Няня, двое детей</td><td>750 ₽ в час</td></tr>
+<tr><td>Гувернантка (занятия)</td><td>900 ₽ в час</td></tr>
+<tr><td>Полный день (до 10 часов)</td><td>5 000 ₽</td></tr>
+<tr><td>Ночь с ребёнком</td><td>3 500 ₽</td></tr>
+</table></div>
+<div class="band">
+<h3>Прикиньте стоимость</h3>
+<div class="calc">
+<div><label for="fmt">Формат</label><select id="fmt"><option value="600">Няня, один ребёнок</option><option value="750">Няня, двое детей</option><option value="900">Гувернантка</option></select></div>
+<div><label for="hrs">Часов в неделю</label><input id="hrs" type="number" min="1" max="60" value="10"></div>
+<div><div>В месяц примерно</div><div class="sum" id="sum" aria-live="polite"></div></div>
+</div></div>
+</section>
+
+<section class="page" id="reviews" aria-label="Отзывы">
+<h1>Отзывы родителей</h1>
+<div class="grid">
+<blockquote><p>Дочка за полгода заговорила по-английски и перестала бояться школы. Мария всегда присылает вечером короткий отчёт, и мы спокойны на работе.</p><cite>Ольга, мама Софии, 6 лет</cite></blockquote>
+<blockquote><p>Сыну тяжело давался режим. Мария за месяц выстроила день так, что он сам идёт спать вовремя. Мы удивились.</p><cite>Дмитрий, папа Артёма, 4 года</cite></blockquote>
+<blockquote><p>Забирает старшего из школы, делает с ним уроки, а младшую укладывает на сон. Детям с ней спокойно и интересно.</p><cite>Наталья, мама Миши и Веры</cite></blockquote>
+</div>
+<p style="margin-top:24px;color:var(--muted)">Рекомендательные письма и контакты семей передам по запросу.</p>
+</section>
+
+<section class="page contact" id="contacts" aria-label="Контакты">
+<h1>Контакты</h1>
+<p class="lead">Напишите мне, ответ придёт в течение дня. Расскажите о ребёнке и о том, когда нужна помощь.</p>
+<a class="big" href="tel:+79000000000">+7 900 000-00-00</a>
+<div class="row" style="margin-top:0"><a class="btn" href="https://t.me/">Написать в Telegram</a><a class="btn alt" href="https://wa.me/">Написать в WhatsApp</a></div>
+<div class="band"><h3>Где я работаю</h3><p>Москва и ближайшее Подмосковье. Выезжаю к вам домой; на прогулки и занятия можем выходить в удобные места рядом.</p><p style="margin:0">Принимаю заявки ежедневно с 9:00 до 21:00.</p></div>
+</section>
+
+</main>
+<footer><div class="wrap">© 2026 Мария Соколова. Няня-гувернантка.</div></footer>
+
+<script>
+(function(){
+var pages=["home","about","services","prices","reviews","contacts"];
+function show(){
+var h=(location.hash||"#home").slice(1);
+if(pages.indexOf(h)<0)h="home";
+pages.forEach(function(p){document.getElementById(p).classList.toggle("on",p===h)});
+document.querySelectorAll("nav a").forEach(function(a){
+if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);show();
+var f=document.getElementById("fmt"),t=document.getElementById("hrs"),s=document.getElementById("sum");
+function calc(){var n=Math.max(0,Math.min(60,+t.value||0));s.textContent=(n*4*(+f.value)).toLocaleString("ru-RU")+" ₽"}
+f.addEventListener("change",calc);t.addEventListener("input",calc);calc();
+})();
+</script>
+</body>
+</html>
